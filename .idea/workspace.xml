@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1eb998f4-d955-45f4-ac07-2c69dd9be3dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lombok.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ge/levanchitiashvili/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ge/levanchitiashvili/HTTPSRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ge/levanchitiashvili/HTTPSRequestService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ge/levanchitiashvili/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ge/levanchitiashvili/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ge/levanchitiashvili/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ge/levanchitiashvili/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +190,7 @@
       <workItem from="1707790595766" duration="12028000" />
       <workItem from="1707872576172" duration="570000" />
       <workItem from="1707873153491" duration="1521000" />
-      <workItem from="1707874682874" duration="10318000" />
+      <workItem from="1707874682874" duration="13594000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -207,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707810909399</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="tags added">
+      <option name="closed" value="true" />
+      <created>1707905783210</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707905783210</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,18 +217,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial comit" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="tags added" />
+    <option name="LAST_COMMIT_MESSAGE" value="tags added" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ge/levanchitiashvili/Main.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.json.JSONObject" memberName="map" />
