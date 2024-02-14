@@ -1,59 +1,55 @@
 package ge.levanchitiashvili;
 
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 
 public class Main {
     public static void main(String[] args) {
-        try {
-            URL url = new URL("https://stackoverflow.com/oauth/lIxT6X6lZt0cjw7LWkUy6g");
-            HttpURLConnection con = (HttpURLConnection) url.openConnection();
-            con.setRequestMethod("POST");
-            con.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36");
-            con.connect();
-            int responseCode = con.getResponseCode();
-            String message = con.getResponseMessage();
-            int i = 7;
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            String accessTokenUrl = "https://stackoverflow.com/oauth/access_token";
+//            String clientId = "28269";
+//            String clientSecret = "cBvc75pOW4mgbCF7w1Q7sQ((";
+//            String redirectUri = "https://stackexchange.com/oauth/login_success";
+//            String authorizationCode = "n8iEEZYmbYmkWV5If*GEow))";
+//            Map<String, Object> access = new HashMap<>();
+//            access.put("client_id", clientId);
+//            access.put("client_secret",clientSecret);
+//            access.put("redirect_uri",redirectUri);
+//            access.put("code",authorizationCode);
+//
+//
+//            URL url = HTTPSRequestService.buildUriWithParams(accessTokenUrl,access);
+//            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//
+//            connection.setRequestMethod("POST");
+//            connection.setRequestProperty("Content-Length", "365");
+//            connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36");
+//            connection.setDoOutput(true);
+//            connection.connect();
+//
+//            int responseCode = connection.getResponseCode();
+//            String message= connection.getResponseMessage();
+//            if (responseCode == HttpURLConnection.HTTP_OK) {
+//                InputStream inputStream = connection.getInputStream();
+//                JSONObject json;
+//                boolean hasNext = false;
+//                if ("gzip".equals(connection.getContentEncoding())) {
+//                    try (InputStreamReader inputStreamReader = new InputStreamReader(new GZIPInputStream(inputStream));
+//                         BufferedReader in = new BufferedReader(inputStreamReader)) {
+//                        json = new JSONObject(HTTPSRequestService.processResponse(in));
+//                    }
+//                } else {
+//                    try (BufferedReader in = new BufferedReader(new InputStreamReader(inputStream))) {
+//                        HTTPSRequestService.processResponse(in);
+//                        json = new JSONObject(HTTPSRequestService.processResponse(in));
+//                    }
+//                }
+//                token=json.getString("access_token");
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
-        String url = "https://api.stackexchange.com/2.3/users";
-        Map<String, Object> params = new HashMap<>();
-        params.put("site", "stackoverflow");
-        params.put("page", 1);
-        params.put("pagesize", 100);
-        params.put("order", "asc");
-        params.put("sort", "reputation");
-        params.put("filter", "default");
-        params.put("key", "U4DMV*8nvpm3EOpvf69Rxw((");
-        List<JSONObject> jsonObjects = HTTPSRequestService.getJsoObjectListFromUrl(url, params);
-        jsonObjects = jsonObjects.stream().filter(user -> user.has("location")
-                &&
-                user.getString("location") != null
-                &&
-                !user.getString("location").isEmpty()
-                &&
+        HTTPSRequestService.getFilteredUsers().forEach(user -> System.out.println(user.toString()));
 
-                (user.getString("location").contains("Moldova")
-                        ||
-                        user.getString("location").contains("Romania")
-                &&
-                user.getInt("reputation")>=223
-
-                )
-        ).toList();
-        System.out.println(jsonObjects);
     }
 
 
