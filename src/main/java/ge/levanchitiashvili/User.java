@@ -19,12 +19,12 @@ public class User {
 
     @Override
     public String toString() {
-        return "username='" + username + '\'' +
-                ", profileLink='" + profileLink + '\'' +
-                ", location='" + location + '\'' +
-                ", questionCount=" + questionCount +
-                ", answerCount=" + answerCount +
-                ", avatar='" + avatar + '\'' +
-                ", tags=" + String.join(",", tags);
+        return "username='" + username + "\n" +
+                " location='" + location + "\n" +
+                " questionCount=" + questionCount +"\n"+
+                " answerCount=" + answerCount +"\n"+
+                " tags=" + String.join(",", tags)+ "\n"+
+                " profileLink='" + profileLink + "\n" +
+                " avatar='" + avatar + "\n";
     }
 }
